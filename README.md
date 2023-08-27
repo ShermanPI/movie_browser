@@ -9,7 +9,7 @@ Requirements:
 
 ✅ - You need to show an input to search for the movie and a button to search.
 
- - List the movies and show the title, year and poster.
+✅ List the movies and show the title, year and poster.
 
  - Make the form work
 

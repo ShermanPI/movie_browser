@@ -1,10 +1,11 @@
+import { useState } from 'react'
 import './App.css'
 import responseMovies from './muck/with-response.json'
-
+import Movies from './components/Movies'
 
 const movies = responseMovies.Search
 
-const mappedMovies = movies.map(el=>{
+const mappedMovies = movies.map(el => {
   return {
     id: el.imdbID,
     name: el.Title,
@@ -14,31 +15,29 @@ const mappedMovies = movies.map(el=>{
 })
 
 function App () {
+  const [query, setQuery] = useState('')
 
-  const submitHandler = (e) =>{
+  const submitHandler = (e) => {
     e.preventDefault()
+    console.log(query)
+  }
+
+  const onChangeHandler = (e) => {
+    const newQuery = e.target.value
+    setQuery(newQuery)
+    console.log(newQuery)
   }
 
   return (
-    <div>
+    <div className='search-container'>
       <header>
         <form className='movie-form' onSubmit={submitHandler}>
-          <input type="text" name="query" />
-          <input type="submit" value="Search" />
+          <input type='text' onChange={onChangeHandler} value={query} name='query' placeholder='Avengers, Sherman, Rambo...' />
+          <input type='submit' value='Search' />
         </form>
       </header>
       <section>
-      <ul>
-        {mappedMovies.map(el=>{
-          return(
-            <li>
-              <b>Title: </b>{el.name}
-              <b>Year: </b>{el.year}
-              <img src={el.image} alt={el.name} />
-            </li>
-          )
-        })}
-      </ul>
+        <Movies movies={mappedMovies} />
       </section>
     </div>
   )

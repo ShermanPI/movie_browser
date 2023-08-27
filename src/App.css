@@ -1,8 +1,26 @@
 .movie-form{
     display: flex;
+    width: 100%;
+}
+
+.movie-form input:nth-child(1){
+    width: 100%;
+}
+
+ul{
+    padding: 0;
 }
 
 li{
     display: flex;
     flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+.search-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin-inline: auto;
 }
