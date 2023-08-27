@@ -2,22 +2,25 @@ Movie Search App
 
 API to use: - https://www.omdbapi.com/ Get the API Key on the website itself by registering your email.
 
+
+✅ My API key: b38d0346
+
 Requirements:
 
-✅ You need to show an input to search for the movie and a button to search.
+✅ - You need to show an input to search for the movie and a button to search.
 
-✅ List the movies and show the title, year and poster.
+ - List the movies and show the title, year and poster.
 
-✅ Make the form work
+ - Make the form work
 
-✅ Make the movies show in a responsive grid.
+ - Make the movies show in a responsive grid.
 
-✅ Fetch data to the API
+ - Fetch data to the API
 
 First iteration:
 
-✅ Avoid doing the same search twice in a row.
+ - Avoid doing the same search twice in a row.
 
-✅ Have the search done automatically when typing.
+ - Have the search done automatically when typing.
 
-✅ Prevents the search from being done continuously when typing (debounce)
+ - Prevents the search from being done continuously when typing (debounce)

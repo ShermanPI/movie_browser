@@ -1,0 +1,76 @@
+{
+    "Response": "True",
+    "Search": [
+        {
+            "imdbID": "tt0864835",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTc2NzUzOTMwM15BMl5BanBnXkFtZTcwNzcxNzI5OQ@@._V1_SX300.jpg",
+            "Title": "Mr. Peabody & Sherman",
+            "Type": "movie",
+            "Year": "2014"
+        },
+        {
+            "imdbID": "tt5021206",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNDVjY2M4ZDctNTU3ZC00MjExLWFmOTUtMTgzOGNhNDVlNzg2XkEyXkFqcGdeQXVyNTgwODM3MjE@._V1_SX300.jpg",
+            "Title": "The Mr. Peabody & Sherman Show",
+            "Type": "series",
+            "Year": "2015–2017"
+        },
+        {
+            "imdbID": "tt1503149",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZDk4ZWE1MjAtNGY5Zi00Yzg4LWFhN2QtNjkxOTNjMzQzMWUzXkEyXkFqcGdeQXVyODQyNDU4OTk@._V1_SX300.jpg",
+            "Title": "Oliver Sherman",
+            "Type": "movie",
+            "Year": "2010"
+        },
+        {
+            "imdbID": "tt0443524",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMjA3NzM1ODI1Nl5BMl5BanBnXkFtZTcwMjMwMjkzMg@@._V1_SX300.jpg",
+            "Title": "Guest of Cindy Sherman",
+            "Type": "movie",
+            "Year": "2008"
+        },
+        {
+            "imdbID": "tt0117629",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYTg5YTE0ZGMtODVmMy00NjBlLWE1ZTItZGQxMjRiZjMyZTAyXkEyXkFqcGdeQXVyMjcwNDczMjY@._V1_SX300.jpg",
+            "Title": "Sherman Oaks",
+            "Type": "series",
+            "Year": "1995–1997"
+        },
+        {
+            "imdbID": "tt2652864",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMjEwMzEyMDQ3N15BMl5BanBnXkFtZTgwODUwOTAxMzE@._V1_SX300.jpg",
+            "Title": "The Best of Mr. Peabody & Sherman",
+            "Type": "series",
+            "Year": "1959–"
+        },
+        {
+            "imdbID": "tt3704982",
+            "Poster": "N/A",
+            "Title": "Mr. Peabody & Sherman: A Journey WABAC",
+            "Type": "movie",
+            "Year": "2014"
+        },
+        {
+            "imdbID": "tt1024991",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYmM0ZTMzMjQtNDU5ZS00MTM2LTkwOTAtZjViOTAyNTc1Y2MyXkEyXkFqcGdeQXVyMzE0MjY5ODA@._V1_SX300.jpg",
+            "Title": "Mary Poppins: A Musical Journey with Richard Sherman",
+            "Type": "movie",
+            "Year": "2004"
+        },
+        {
+            "imdbID": "tt10100842",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BYjBkNmFhNzUtZjNkNy00ZjU0LWEyYzUtZTIyOGRhYjU3NDUyXkEyXkFqcGdeQXVyMTAwNzc3NzI2._V1_SX300.jpg",
+            "Title": "William Tecumseh Sherman: Beyond the March to the Sea",
+            "Type": "movie",
+            "Year": "2019"
+        },
+        {
+            "imdbID": "tt0338270",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTQ4ODYwMDgwMl5BMl5BanBnXkFtZTgwMDkwNDUzMzE@._V1_SX300.jpg",
+            "Title": "Music Magic: The Sherman Brothers - Bedknobs and Broomsticks",
+            "Type": "movie",
+            "Year": "2001"
+        }
+    ],
+    "totalResults": "55"
+}

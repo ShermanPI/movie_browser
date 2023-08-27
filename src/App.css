@@ -1,0 +1,8 @@
+.movie-form{
+    display: flex;
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+}
