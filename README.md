@@ -12,11 +12,11 @@ Requirements:
 
 ✅ Make the movies show in a responsive grid.
 
- - Fetch data to the API
+✅ Fetch data to the API
 
 First iteration:
 
- - Avoid doing the same search twice in a row.
+✅ Avoid doing the same search twice in a row.
 
  - Have the search done automatically when typing.
 
