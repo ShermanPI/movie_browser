@@ -1,14 +1,15 @@
 // import responseMovies from '../mocks/with-response.json'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function useMovies ({ query }) {
   const [search, setSearch] = useState('')
+  const lastSearchRed = useRef('')
   // if (query) return
 
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
-    if (search) {
+    if (search && lastSearchRed.current !== search) {
       fetch(`http://www.omdbapi.com/?apikey=b38d0346&s=${search}`)
         .then(res => res.json())
         .then(data => {
@@ -24,6 +25,8 @@ export default function useMovies ({ query }) {
           })
 
           setMovies(mappedMovies)
+          lastSearchRed.current = search
+          console.log('se busco')
         })
     }
   }, [search])
