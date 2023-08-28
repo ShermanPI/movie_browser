@@ -4,7 +4,7 @@ export default function useSearch () {
   const [query, setQuery] = useState('')
   const [error, setError] = useState('')
 
-  const updateSearch = (newValue) => {
+  const updateQuery = (newValue) => {
     // prevalidation
     if (newValue.startsWith(' ')) return
 
@@ -16,7 +16,7 @@ export default function useSearch () {
       return
     }
 
-    if (newValue.length) {
+    if (newValue.length < 3 && newValue.length > 0) {
       setError('The movie to search must be 3 characters or more')
       return
     }
@@ -28,7 +28,7 @@ export default function useSearch () {
     {
       query,
       error,
-      updateSearch
+      updateQuery
     }
   )
 }

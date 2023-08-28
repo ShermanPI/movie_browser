@@ -4,8 +4,10 @@ function ListOfMovies ({ movies }) {
       {movies.map(el => {
         return (
           <li key={el.id}>
-            <h3>{el.name}</h3>
-            <p>{el.year}</p>
+            <div className='movie-title'>
+              <h3>{el.name}</h3>
+              <p>{el.year}</p>
+            </div>
             <img src={el.image} alt={el.name} />
           </li>
         )

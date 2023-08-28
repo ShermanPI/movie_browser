@@ -27,17 +27,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.movie-list li p{
-    margin: 0;
-    margin-bottom: 0.5rem;
-}
-
-.movie-list li h3{
-    margin: 0;
+    justify-content: space-around;
 }
 
 .movie-list li img{
     border-radius: 8px;
+}
+
+.movie-title{
+    text-align: center;
+}
+
+.movie-title p{
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.movie-title h3{
+    margin: 0;
 }
