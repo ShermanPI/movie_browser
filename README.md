@@ -7,7 +7,7 @@ API to use: - https://www.omdbapi.com/ Get the API Key on the website itself by 
 
 Requirements:
 
-✅ - You need to show an input to search for the movie and a button to search.
+✅ You need to show an input to search for the movie and a button to search.
 
 ✅ List the movies and show the title, year and poster.
 
