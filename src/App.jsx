@@ -14,18 +14,22 @@ const mappedMovies = movies.map(el => {
 })
 
 function App () {
-  const { query, onChangeHandler, error } = useSearch()
+  const { query, updateSearch, error } = useSearch()
 
   const submitHandler = (e) => {
     e.preventDefault()
     console.log(query)
   }
 
+  const handleChange = (e) => {
+    updateSearch(e.target.value)
+  }
+
   return (
     <div className='search-container'>
       <header>
         <form className='movie-form' onSubmit={submitHandler}>
-          <input autoComplete='false' type='text' onChange={onChangeHandler} value={query} name='query' placeholder='Avengers, Sherman, Rambo...' style={{ border: error && '1px solid red' }} />
+          <input required autoComplete='false' type='text' onChange={handleChange} value={query} name='query' placeholder='Avengers, Sherman, Rambo...' style={{ border: error && '1px solid red' }} />
           <input type='submit' value='Search' />
         </form>
         <p style={{ color: 'red' }}>{error}</p>

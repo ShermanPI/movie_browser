@@ -4,21 +4,19 @@ export default function useSearch () {
   const [query, setQuery] = useState('')
   const [error, setError] = useState('')
 
-  const onChangeHandler = (e) => {
-    const newQuery = e.target.value
+  const updateSearch = (newValue) => {
+    // prevalidation
+    if (newValue.startsWith(' ')) return
 
-    // prevalidationA
-    if (newQuery.startsWith(' ')) return
-
-    setQuery(newQuery)
+    setQuery(newValue)
 
     // searching for special characters
-    if (newQuery.match(/^\d+$/)) {
+    if (newValue.match(/^\d+$/)) {
       setError('Special characters are not allowed')
       return
     }
 
-    if (newQuery.length < 3 && newQuery.length > 0) {
+    if (newValue.length) {
       setError('The movie to search must be 3 characters or more')
       return
     }
@@ -30,7 +28,7 @@ export default function useSearch () {
     {
       query,
       error,
-      onChangeHandler
+      updateSearch
     }
   )
 }

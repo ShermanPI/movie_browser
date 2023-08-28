@@ -7,20 +7,37 @@
     width: 100%;
 }
 
-ul{
-    padding: 0;
-}
-
-li{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5rem;
-}
-
 .search-container{
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 500px;
+    max-width: 900px;
     margin-inline: auto;
+}
+
+.movie-list{
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2rem;
+}
+
+.movie-list li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-list li p{
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.movie-list li h3{
+    margin: 0;
+}
+
+.movie-list li img{
+    border-radius: 8px;
 }
