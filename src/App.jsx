@@ -5,11 +5,11 @@ import useSearch from './hooks/useSearch'
 
 function App () {
   const { query, updateQuery, error } = useSearch()
-  const { movies, setSearch } = useMovies({ query })
+  const { movies, getMovies } = useMovies({ query })
 
   const submitHandler = (e) => {
     e.preventDefault()
-    setSearch(query)
+    getMovies()
   }
 
   const handleChange = (e) => {
@@ -26,7 +26,7 @@ function App () {
         <p style={{ color: 'red' }}>{error}</p>
       </header>
       <section>
-        <Movies movies={movies} />
+        {movies ? <Movies movies={movies} /> : <p>No movies found for this search</p>}
       </section>
     </div>
   )
