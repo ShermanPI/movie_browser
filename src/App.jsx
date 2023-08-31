@@ -26,7 +26,7 @@ function App () {
         <p style={{ color: 'red' }}>{error}</p>
       </header>
       <section>
-        {movies ? <Movies movies={movies} /> : <p>No movies found for this search</p>}
+        {movies ? <Movies movies={movies} /> : <p>Loading...</p>}
       </section>
     </div>
   )
