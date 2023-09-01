@@ -1,6 +1,6 @@
 // import responseMovies from '../mocks/with-response.json'
 import { searchMovies } from '../services/movies'
-import { useRef, useState, useMemo } from 'react'
+import { useRef, useState, useMemo, useCallback } from 'react'
 
 export default function useMovies ({ query, sort }) {
   const lastSearchRed = useRef('')
@@ -8,7 +8,7 @@ export default function useMovies ({ query, sort }) {
   const [movies, setMovies] = useState([])
   const [error, setError] = useState('')
 
-  const getMovies = async () => {
+  const getMovies = useCallback(async () => {
     try {
       if (query && lastSearchRed.current !== query) {
         setLoading(true)
@@ -21,7 +21,7 @@ export default function useMovies ({ query, sort }) {
     } finally {
       setLoading(false)
     }
-  }
+  }, [query])
 
   const sortedMovies = useMemo(() => {
     return sort
