@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 export default function useSearch () {
   const [query, setQuery] = useState('')
-  const [error, setError] = useState('')
+  const [errorQuery, setError] = useState('')
 
   const updateQuery = (newValue) => {
     // prevalidation
@@ -27,7 +27,7 @@ export default function useSearch () {
   return (
     {
       query,
-      error,
+      errorQuery,
       updateQuery
     }
   )

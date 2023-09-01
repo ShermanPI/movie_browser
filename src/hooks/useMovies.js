@@ -4,20 +4,29 @@ import { useRef, useState } from 'react'
 
 export default function useMovies ({ query }) {
   const lastSearchRed = useRef('')
-  // if (query) return
-
+  const [loading, setLoading] = useState(false)
   const [movies, setMovies] = useState([])
+  const [error, setError] = useState('')
 
   const getMovies = async () => {
-    if (query && lastSearchRed.current !== query) {
-      const movies = await searchMovies({ query })
-      setMovies(movies)
-      lastSearchRed.current = query
+    try {
+      if (query && lastSearchRed.current !== query) {
+        setLoading(true)
+        const movies = await searchMovies({ query })
+        setMovies(movies)
+        lastSearchRed.current = query
+      }
+    } catch (err) {
+      setError('Something Wrong Happend In Your Request', err.message)
+    } finally {
+      setLoading(false)
     }
   }
 
   return {
     movies,
+    error,
+    loading,
     getMovies
   }
 }

@@ -4,8 +4,8 @@ import useMovies from './hooks/useMovies'
 import useSearch from './hooks/useSearch'
 
 function App () {
-  const { query, updateQuery, error } = useSearch()
-  const { movies, getMovies } = useMovies({ query })
+  const { query, updateQuery, errorQuery } = useSearch()
+  const { movies, loading, getMovies, error } = useMovies({ query })
 
   const submitHandler = (e) => {
     e.preventDefault()
@@ -23,10 +23,12 @@ function App () {
           <input autoComplete='false' type='text' onChange={handleChange} value={query} name='query' placeholder='Avengers, Sherman, Rambo...' style={{ border: error && '1px solid red' }} />
           <input type='submit' value='Search' />
         </form>
-        <p style={{ color: 'red' }}>{error}</p>
+        <p style={{ color: 'red' }}>{errorQuery || error}</p>
       </header>
       <section>
-        {movies ? <Movies movies={movies} /> : <p>Loading...</p>}
+        {loading
+          ? <h3>Loading...</h3>
+          : <Movies movies={movies} />}
       </section>
     </div>
   )

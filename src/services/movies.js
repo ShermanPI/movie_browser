@@ -14,7 +14,7 @@ export const searchMovies = async ({ query }) => {
         year: el.Year
       }
     })
-  } catch {
-    throw Error('An error ocurred in search movies request')
+  } catch (err) {
+    throw Error('An error ocurred in search movies request ', err.message)
   }
 }
