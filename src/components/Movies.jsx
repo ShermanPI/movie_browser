@@ -23,10 +23,12 @@ function NoMoviesResult () {
 }
 
 export default function Movies ({ movies }) {
+  const hasMovies = movies.length > 0
+
   return (
     <>
       {
-        movies
+        hasMovies
           ? <ListOfMovies movies={movies} />
           : <NoMoviesResult />
       }
