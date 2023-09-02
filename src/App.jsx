@@ -22,6 +22,8 @@ function App () {
     setSort(!sort)
   }
 
+  console.log(error)
+
   return (
     <div className='search-container'>
       <header>
