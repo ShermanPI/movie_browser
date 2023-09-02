@@ -10,8 +10,6 @@ export default function useMovies ({ query, sort }) {
 
   const getMovies = useCallback(async () => {
     if (query === lastSearchRed.current) return
-
-  const getMovies = useCallback(async () => {
     try {
       if (query) {
         lastSearchRed.current = query
