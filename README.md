@@ -18,6 +18,6 @@ First iteration:
 
 ✅ Avoid doing the same search twice in a row.
 
- - Have the search done automatically when typing.
+✅ Have the search done automatically when typing.
 
  - Prevents the search from being done continuously when typing (debounce)

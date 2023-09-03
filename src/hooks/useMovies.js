@@ -2,17 +2,18 @@
 import { searchMovies } from '../services/movies'
 import { useRef, useState, useMemo, useCallback } from 'react'
 
-export default function useMovies ({ query, sort }) {
-  const lastSearchRed = useRef('')
+export default function useMovies ({ sort }) {
+  const previousSearch = useRef('')
   const [loading, setLoading] = useState(false)
   const [movies, setMovies] = useState([])
   const [, setError] = useState('')
 
-  const getMovies = useCallback(async () => {
-    if (query === lastSearchRed.current) return
+  const getMovies = useCallback(async ({ query }) => {
+    if (query === previousSearch.current) return
+
     try {
       if (query) {
-        lastSearchRed.current = query
+        previousSearch.current = query
         setLoading(true)
         setError(null)
         const movies = await searchMovies({ query })
@@ -23,7 +24,7 @@ export default function useMovies ({ query, sort }) {
     } finally {
       setLoading(false)
     }
-  }, [query])
+  }, [])
 
   const sortedMovies = useMemo(() => {
     return sort
