@@ -2,7 +2,7 @@ export const searchMovies = async ({ query }) => {
   if (query === '') return null
 
   try {
-    const res = await fetch(`http://www.omdbapi.com/?apikey=b38d0346&s=${query}`)
+    const res = await fetch(`https://www.omdbapi.com/?apikey=b38d0346&s=${query}`)
     const data = await res.json()
     const movies = data.Search
 
