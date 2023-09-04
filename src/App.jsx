@@ -1,27 +1,27 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import Movies from './components/Movies'
 import useMovies from './hooks/useMovies'
 import useSearch from './hooks/useSearch'
+import useDebounce from './hooks/useDebounce'
 
 function App () {
   const { query, updateQuery, errorQuery } = useSearch()
   const [sort, setSort] = useState(false)
   const { movies, loading, getMovies } = useMovies({ sort })
-  const setTimeOutId = useRef()
 
   const submitHandler = (e) => {
     e.preventDefault()
     getMovies({ query })
   }
 
+  useDebounce(() => {
+    getMovies({ query })
+  }, 500, [query])
+
   const handleChange = (e) => {
     const newQuery = e.target.value
     updateQuery(newQuery)
-    clearTimeout(setTimeOutId.current)
-    setTimeOutId.current = setTimeout(() => {
-      getMovies({ query: newQuery })
-    }, 500)
   }
 
   const handleCheck = () => {
